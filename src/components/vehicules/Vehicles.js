@@ -1,0 +1,29 @@
+import { useState, useEffect } from "react";
+import Container from 'react-bootstrap/Container';
+import VehiclesService from "../../services/VehiclesService";
+import VehicleList from "../common/VehicleList";
+
+const Vehicles = () => {
+
+    const [vehiclesData, setFilms] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const vehicleService = new VehiclesService();
+
+    useEffect( ()=> {
+        async function getData() {
+           const data = await vehicleService.getAllVehicles();
+           setFilms(data);
+           setLoading(false);
+        }
+        getData();
+    }, []);
+
+    return ( 
+        <Container>
+            {vehiclesData && <VehicleList vehicles={vehiclesData} titre={'Liste des vehicules'} loader={loading} />}
+        </Container>
+     );
+}
+ 
+export default Vehicles;
