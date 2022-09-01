@@ -16,7 +16,7 @@ const NavBar = () => {
                     <Link className={`${url.includes('people') ? 'active' : ''} lien`} to={'/people'}>Personnages</Link>
                 </li>
                 <li>
-                    <Link className={`${url.includes('vehicules') ? 'active' : ''} lien`} to={'/vehicules'}>Vehicules</Link>
+                    <Link className={`${url.includes('vehicules') ? 'active' : ''} lien`} to={'/vehicules'}>Véhicules</Link>
                 </li>
                 <li>
                     <Link className={`${url.includes('vaisseaux') ? 'active' : ''} lien`} to={'/vaisseaux'}>Vaisseaux Spatiaux</Link>

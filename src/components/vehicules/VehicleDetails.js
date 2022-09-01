@@ -45,7 +45,7 @@ const VehicleDetails = () => {
 
     return ( 
         <Container>
-            <h2 className="my-5">Vehicle</h2>
+            <h2 className="my-5">Détails véhicules</h2>
             <Row>
                 <h2 className='text-center'>{vehicle.name}</h2>
                 <Table striped bordered hover>

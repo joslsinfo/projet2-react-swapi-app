@@ -52,7 +52,7 @@ const FilmDetails = () => {
 
     return ( 
         <Container>
-            <h2 className="my-5">Details Film</h2>
+            <h2 className="my-5">Détails Film</h2>
             <Row>
                 <h1>{film.title}</h1>
                 <p>{film.opening_crawl}</p>

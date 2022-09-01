@@ -21,7 +21,7 @@ const Vehicles = () => {
 
     return ( 
         <Container>
-            {vehiclesData && <VehicleList vehicles={vehiclesData} titre={'Liste des vehicules'} loader={loading} />}
+            {vehiclesData && <VehicleList vehicles={vehiclesData} titre={'Liste des véhicules'} loader={loading} />}
         </Container>
      );
 }

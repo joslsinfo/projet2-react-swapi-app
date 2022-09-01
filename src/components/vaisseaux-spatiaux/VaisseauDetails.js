@@ -48,7 +48,7 @@ const VaisseauDetails = () => {
 
     return ( 
         <Container>
-            <h2 className="my-5">Details Vaisseau Spatial</h2>
+            <h2 className="my-5">Détails Vaisseau Spatial</h2>
             <Row>
                 <h1>{vaisseau.name}</h1>
                 <p>{vaisseau.model}</p>

@@ -20,7 +20,7 @@ const Poeple = () => {
     
     return ( 
         <Container>
-            <PeopleList people={peopleData} titre={'Liste des caracteres'} loader={loading} />
+            <PeopleList people={peopleData} titre={'Liste des personnages'} loader={loading} />
         </Container>
      );
 }
