@@ -7,7 +7,7 @@ const NavBar = () => {
 
     return ( 
         <nav>
-            <h1 className="app-logo">Star War App</h1>
+            <h1 className="app-logo">Star Wars App</h1>
             <ul className="liens">
                 <li>
                     <Link className={`${url.includes('films') ? 'active' : ''} lien`} to={'/films'}>Films</Link>

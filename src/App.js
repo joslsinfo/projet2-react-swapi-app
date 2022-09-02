@@ -1,7 +1,7 @@
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/common/Navbar';
 
@@ -17,7 +17,7 @@ import VaisseauDetails from './components/vaisseaux-spatiaux/VaisseauDetails';
 
 function App() {
   return (
-       /* <Router> */
+     
     <BrowserRouter>
         <div className="App">
             <NavBar />
@@ -34,7 +34,7 @@ function App() {
             </Routes>
         </div>
       </BrowserRouter>
-      /* </Router> */
+    
   );
 }
 
