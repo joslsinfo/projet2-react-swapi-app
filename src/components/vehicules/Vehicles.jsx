@@ -5,7 +5,7 @@ import VehicleList from "../common/VehicleList";
 
 const Vehicles = () => {
 
-    const [vehiclesData, setFilms] = useState([]);
+    const [vehiclesData, setVehicles] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const vehicleService = new VehiclesService();
@@ -13,7 +13,7 @@ const Vehicles = () => {
     useEffect( ()=> {
         async function getData() {
            const data = await vehicleService.getAllVehicles();
-           setFilms(data);
+           setVehicles(data);
            setLoading(false);
         }
         getData();
