@@ -74,6 +74,10 @@ const VehicleDetails = () => {
                             <td>Passengers</td>
                             <td>{vehicle.passengers}</td>
                         </tr>
+                        <tr>
+                            <td>Vehicle class</td>
+                            <td>{vehicle.vehicle_class}</td>
+                        </tr>
                     </tbody>
                 </Table>
                 <FilmList films={films} titre={'Films'} loader={loading} />

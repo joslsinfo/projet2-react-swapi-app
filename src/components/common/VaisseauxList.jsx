@@ -18,6 +18,11 @@ const VaisseauxList = (props) => {
                     <ListGroup.Item className="bg-light" href="#link1">
                         <Link className="title-people" to={`/vaisseaux/${vaisseau.url.split('/').slice(-2, -1)[0]}`} >{vaisseau.name}</Link>
                         <p>{vaisseau.model}</p>
+                        <p>Cost in credits: {vaisseau.cost_in_credits}</p>
+                        <p>Length: {vaisseau.length}</p>
+                        <p>Passengers: {vaisseau.passengers}</p>
+                        <p>Max atmosphering speed: {vaisseau.max_atmosphering_speed}</p>
+                        <p>Hyperdrive rating: <em>{vaisseau.hyperdrive_rating}</em></p>
                     </ListGroup.Item>
                     <ListGroup.Item href="#link2">
                         <span>Made by: {vaisseau.manufacturer}</span>
