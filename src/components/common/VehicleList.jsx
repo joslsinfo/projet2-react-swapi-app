@@ -11,7 +11,7 @@ const VehicleList = (props) => {
     return ( 
         <Row>
             <h2 className="my-5">{titre}</h2>
-            {loader && <Loader element={'personnages'} />}
+            {loader && <Loader element={'vehicules'} />}
             {vehicles.map((vehicle, index) => (
                 <Col md={6} key={index+1} className="align-left">
                     <ListGroup>

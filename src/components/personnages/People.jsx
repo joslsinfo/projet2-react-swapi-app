@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import CharactersService from "../../services/CharactersService";
 import PeopleList from "../common/PeopleList";
 
-const Poeple = () => {
+const People = () => {
     const [peopleData, setPeople] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -25,4 +25,4 @@ const Poeple = () => {
      );
 }
  
-export default Poeple;
+export default People;
