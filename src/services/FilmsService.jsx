@@ -7,6 +7,7 @@ class FilmsService {
 			const response = await fetch(this.url);
 			if (!response.ok) throw new Error(response.statusText);
 			const data = await response.json();	
+			console.log(data.results);
 			return data.results;
 		} catch (e) {
 			console.error(e);
