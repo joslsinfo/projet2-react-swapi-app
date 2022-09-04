@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/common/Navbar';
+import NotFound from './components/common/NotFound';
 
 import Films from './components/films/Films';
 import FilmDetails from './components/films/FilmDetails';
@@ -18,8 +19,8 @@ import VaisseauDetails from './components/vaisseaux-spatiaux/VaisseauDetails';
 function App() {
   return (
      
-    <BrowserRouter>
-        <div className="App">
+    <div className="App">
+          <BrowserRouter>
             <NavBar />
             <Routes>
               <Route path="/" element={<Films />} />
@@ -31,9 +32,10 @@ function App() {
               <Route path="/vehicules/:id" element={ <VehicleDetails />} />
               <Route path="/vaisseaux" element={ <Vaisseaux />} />
               <Route path="/vaisseaux/:id" element={ <VaisseauDetails />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
-        </div>
       </BrowserRouter>
+        </div>
     
   );
 }
