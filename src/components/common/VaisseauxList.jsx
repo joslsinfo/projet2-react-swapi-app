@@ -8,6 +8,8 @@ const VaisseauxList = (props) => {
 
     const {vaisseaux, titre, loader} = props;
 
+    const getUrlId = (url) => url.match(/\d+/).join("");
+
     return ( 
         <Row>
         <h2 className="my-5">{titre}</h2>
@@ -16,7 +18,8 @@ const VaisseauxList = (props) => {
             <Col md={6} key={index} className="align-left">
                 <ListGroup>
                     <ListGroup.Item className="bg-light" href="#link1">
-                        <Link className="title-people" to={`/vaisseaux/${vaisseau.url.split('/').slice(-2, -1)[0]}`} >{vaisseau.name}</Link>
+                        {/* <Link className="title-people" to={`/vaisseaux/${vaisseau.url.split('/').slice(-2, -1)[0]}`} >{vaisseau.name}</Link> */}
+                        <Link className="title-link" to={`/vaisseaux/${getUrlId(vaisseau.url)}`} >{vaisseau.name}</Link>
                         <p>{vaisseau.model}</p>
                         <p>Cost in credits: {vaisseau.cost_in_credits}</p>
                         <p>Length: {vaisseau.length}</p>

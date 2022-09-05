@@ -9,6 +9,8 @@ const PeopleList = (props) => {
 
     const {people, titre, loader} = props;
 
+    const getUrlId = (url) => url.match(/\d+/).join("");
+    
     return ( 
         <Row>
         <h2 className="my-5">{titre}</h2>
@@ -17,7 +19,8 @@ const PeopleList = (props) => {
             <Col md={6} key={index} className="align-left">
                 <ListGroup>
                     <ListGroup.Item className="bg-light" href="#link1">
-                        <Link className="title-people" to={`/people/${character.url.split('/').slice(-2, -1)[0]}`} >{character.name}</Link>
+                        {/* <Link className="title-people" to={`/people/${character.url.split('/').slice(-2, -1)[0]}`} >{character.name}</Link> */}
+                        <Link className="title-people" to={`/people/${getUrlId(character.url)}`} >{character.name}</Link>
                         <p>{character.birth_year}</p>
                     </ListGroup.Item>
                 </ListGroup>

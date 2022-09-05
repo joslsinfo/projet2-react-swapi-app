@@ -8,6 +8,8 @@ import Loader from "./Loader";
 const FilmList = (props) => {
 
     const {films, titre, loader} = props;
+
+    const getUrlId = (url) => url.match(/\d+/).join("");
     
     return ( 
         <Row>
@@ -17,7 +19,8 @@ const FilmList = (props) => {
                 <Col md={6} key={film.episode_id} className="align-left">
                     <ListGroup>
                         <ListGroup.Item className="bg-light" href="#link1">
-                            <Link className="title-link" to={`/films/${film.url.split('/').slice(-2, -1)[0]}`} >{film.title}</Link>
+                            {/* <Link className="title-link" to={`/films/${film.url.split('/').slice(-2, -1)[0]}`} >{film.title}</Link> */}
+                            <Link className="title-link" to={`/films/${getUrlId(film.url)}`} >{film.title}</Link>
                             <p>{film.episode_id}th film</p>
                            
                         </ListGroup.Item>

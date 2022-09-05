@@ -8,6 +8,8 @@ const VehicleList = (props) => {
 
     const {vehicles, titre, loader } = props;
 
+    const getUrlId = (url) => url.match(/\d+/).join("");
+
     return ( 
         <Row>
             <h2 className="my-5">{titre}</h2>
@@ -16,7 +18,8 @@ const VehicleList = (props) => {
                 <Col md={6} key={index+1} className="align-left">
                     <ListGroup>
                         <ListGroup.Item className="bg-light" href="#link1">
-                            <Link className="title-link" to={`/vehicules/${vehicle.url.split('/').slice(-2, -1)[0]}`} >{vehicle.name}</Link>
+                            {/* <Link className="title-link" to={`/vehicules/${vehicle.url.split('/').slice(-2, -1)[0]}`} >{vehicle.name}</Link> */}
+                            <Link className="title-link" to={`/vehicules/${getUrlId(vehicle.url)}`} >{vehicle.name}</Link>
                             <p>{vehicle.model}</p>
                         </ListGroup.Item>
                         <ListGroup.Item href="#link2">
