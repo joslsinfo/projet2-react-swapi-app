@@ -1,12 +1,16 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
     <Container fluid>
       <Container className="vh-100 d-flex justify-content-center align-items-center text-danger">
-        <h1 className="gy-3">Error 404! The page you are looking for doesn't exist.</h1> 
-        
+        <div className="text-center g-5">
+          <h1> Error 404! </h1>
+          <p>The page you are looking for doesn't exist. </p>
+          <Link className="titlePage-NotFound" to='/'>Aller à la page d'accueil </Link>
+        </div>
       </Container>
     </Container>
   );
