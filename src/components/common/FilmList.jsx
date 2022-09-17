@@ -22,6 +22,7 @@ const FilmList = (props) => {
                             {/* <Link className="title-link" to={`/films/${film.url.split('/').slice(-2, -1)[0]}`} >{film.title}</Link> */}
                             <Link className="title-link" to={`/films/${getUrlId(film.url)}`} >{film.title}</Link>
                             <p>{film.episode_id}th film</p>
+                          
                            
                         </ListGroup.Item>
                         <ListGroup.Item href="#link2">
