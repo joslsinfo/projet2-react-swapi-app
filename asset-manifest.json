@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/projet2-react-swapi-app/static/css/main.f91d60ea.css",
+    "main.js": "/projet2-react-swapi-app/static/js/main.d069790e.js",
+    "index.html": "/projet2-react-swapi-app/index.html",
+    "main.f91d60ea.css.map": "/projet2-react-swapi-app/static/css/main.f91d60ea.css.map",
+    "main.d069790e.js.map": "/projet2-react-swapi-app/static/js/main.d069790e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f91d60ea.css",
+    "static/js/main.d069790e.js"
+  ]
+}
